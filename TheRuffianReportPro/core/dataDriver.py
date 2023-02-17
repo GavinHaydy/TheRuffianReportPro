@@ -15,6 +15,7 @@ from functools import wraps
 import json
 import yaml
 
+
 def _create_test_name(index, name):
     if index + 1 < 10:
         test_name = name + "_00" + str(index + 1)
@@ -66,28 +67,32 @@ def list_and_dict_data(datas):
     :return:
     """
     result = []
+
     def wrapper(func):
-        if isinstance(datas,dict):
+        if isinstance(datas, dict):
             result.append(datas)
             setattr(func, "PARAMS", result)
         else:
             setattr(func, "PARAMS", datas)
         return func
+
     return wrapper
+
 
 def yaml_data(file_path):
     """
-    :param file_path: yaml文件路径
-    :return:
+    file_path: yaml文件路径
+    return: yaml datas
     """
     result = []
+
     def wrapper(func):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 datas = yaml.load(f, Loader=yaml.FullLoader)
                 result.append(datas)
                 print(result)
-        except:
+        except UnicodeDecodeError:
             with open(file_path, "r", encoding="gbk") as f:
                 datas = yaml.load(f, Loader=yaml.FullLoader)
                 result.append(datas)
@@ -99,8 +104,8 @@ def yaml_data(file_path):
 
 def json_data(file_path):
     """
-    :param file_path: json文件路径
-    :return:
+    file_path: json path
+    :return: json datas
     """
 
     def wrapper(func):
@@ -109,7 +114,7 @@ def json_data(file_path):
             with open(file_path, "r", encoding="utf-8") as f:
                 datas = json.load(f)
                 result.append(datas)
-        except:
+        except UnicodeDecodeError:
             with open(file_path, "r", encoding="gbk") as f:
                 datas = json.load(f)
                 result.append(datas)
