@@ -1,6 +1,6 @@
-(https://img.shields.io/badge/Version-1.0.0-green.svg)
-(https://img.shields.io/badge/License-MIT-orange.svg)
-(https://img.shields.io/badge/Python-3-green.svg)
+![](https://img.shields.io/badge/Version-1.0.0-green.svg)
+![](https://img.shields.io/badge/License-MIT-orange.svg)
+![](https://img.shields.io/badge/Python-3-green.svg)
 
 # Introduction
 ```text
