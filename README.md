@@ -23,32 +23,35 @@ email:theruffian@163.com
 
 # Instructions for use
 ### Case
+
 ```python
 import unittest
 from selenium import webdriver
-from TheRuffianReportPro.common import failure_monitor
+from GavinReportPro.common import failure_monitor
+
 
 class Test_demo(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = webdriver.Chrome()
-        self.failureException = failure_monitor(self,'images')
+        self.failureException = failure_monitor(self, 'images')
         self.driver.get("url")
-    
+
     def test_example(self):
         self.driver.find_element(By, Element).send_keys(keyword)
         self.driver.find_element(By, Element).click()
-        self.assertEqual(first,second) # Take a screenshot if the first assertion fails 
+        self.assertEqual(first, second)  # Take a screenshot if the first assertion fails 
 
 ```
 ### Run
+
 ```python
 import unittest
-from TheRuffianReportPro.core.testRunner import TestRunner
+from GavinReportPro.core.testRunner import TestRunner
 from case.xxx import Test_demo
 
 runner = TestRunner(unittest.TestLoader().loadTestsFromTestCase(Test_demo),
-                        filename='report.html',
-                        report_dir='./Report',
-                        templates=3)
+                    filename='report.html',
+                    report_dir='./Report',
+                    templates=3)
 runner.run()
 ```
