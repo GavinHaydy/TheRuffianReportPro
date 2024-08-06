@@ -1,8 +1,8 @@
 [project]
-name = "TheRuffianReportPro"
+name = "GavinReportPro"
 version = "1.0.0"  # 版本号
 authors=[
-    {name="TheRuffian",email="bugpz2779@gmail.com"}
+    {name="GavinHaydy",email="bugpz2779@gmail.com"}
 ]
 description="Report for unittest"  # 描述
 readme = "README.md"
@@ -19,9 +19,9 @@ classifiers=[
 dependencies = [
     "requests","PyYAML","Jinja2"
 ]
-keywords=[ "theruffian", "ruffianTest", "ruffian","TheRuffian", "TheRuffianReportPro"]
+keywords=[ "Gavin", "GavinHaydy", "ruffian", "GavinReportPro"]
 
 
 [project.urls]
-"Homepage" = "https://github.com/the-ruffian/TheRuffianReportPro"
-"download_page" = "https://codeload.github.com/the-ruffian/TheRuffianReportPro/zip/refs/heads/master"
+"Homepage" = "https://github.com/GavinHaydy/TheRuffianReportPro"
+"download_page" = "https://codeload.github.com/GavinHaydy/TheRuffianReportPro/zip/refs/heads/master"
