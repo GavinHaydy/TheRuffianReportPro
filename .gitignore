@@ -1,0 +1,5 @@
+.idea
+dist/
+GavinReportPro.egg-info/
+.venv/
+venv/
